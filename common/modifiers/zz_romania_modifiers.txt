@@ -1,0 +1,12 @@
+﻿zz_romania_unified_bonus = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_statue_positive.dds
+	country_prestige_mult = 0.1
+	country_influence_mult = 0.1
+}
+
+zz_romanian_nationalism_bonus = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_rifle_positive.dds
+
+	battle_offense_owned_province_mult = 0.1
+	battle_defense_owned_province_mult = 0.25
+}

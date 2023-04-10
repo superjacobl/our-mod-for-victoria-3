@@ -1,0 +1,306 @@
+﻿namespace = zz_romania_events
+
+# Unification
+zz_romania_events.1 = {
+
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	title = zz_romania_events.1.t
+	desc = zz_romania_events.1.d1
+	flavor = zz_romania_events.1.f
+
+	option = {
+		name = zz_romania_events.1.a
+		change_tag = ROM # Changing tag via script does not upgrade to the appropriate tier.
+
+		add_modifier = {
+			name = zz_romania_unified_bonus
+			months = normal_modifier_time
+		}
+
+		custom_tooltip = {
+			text = zz_romania_annex_romanian_subjects
+		}
+		custom_tooltip = {
+			text = zz_romania_claim_romanian_homelands
+		}
+
+		hidden_effect = {
+			while = {
+				limit = {
+					any_country = {
+						is_subject_of = ROOT
+						country_has_primary_culture = cu:romanian
+					}
+				}
+				random_country = {
+					limit = {
+						is_subject_of = ROOT
+						country_has_primary_culture = cu:romanian					
+					}
+					save_scope_as = romanian_subject_annex			
+				}
+				annex = scope:romanian_subject_annex
+			}
+			while = {
+				limit = {
+					any_state = {
+						state_region = { is_homeland = cu:romanian }
+						NOR = {
+							owner = ROOT
+							owner = { is_subject_of = ROOT }
+						}
+						NOT = {
+							root = { has_claim = prev }
+						}				
+					}
+				}
+				random_state = {
+					limit = {
+						state_region = { is_homeland = cu:romanian }
+						NOR = {
+							owner = ROOT
+							owner = { is_subject_of = ROOT }
+						}						
+					}
+					save_scope_as = romanian_homeland_state
+				}
+				scope:romanian_homeland_state.state_region = {
+					add_claim = ROOT				
+				}			
+			}
+		}		
+	}
+}	
+
+# Moldavia/Wallachia/Transylvania petitions
+zz_romania_events.2 = {
+
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	title = zz_romania_events.2.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = zz_romania_events.2.d1
+			}
+		}
+	}
+
+	flavor = zz_romania_events.2.f
+
+	cooldown = { months = 6 } # This is really just for the miniscule off chance that Transylvania somehow exists.
+
+	duration = 7
+
+	trigger = {
+		root.infamy < infamy_threshold:infamous
+		any_country = {
+			has_technology_researched = nationalism
+			country_has_primary_culture = cu:romanian
+			OR = {
+				AND = {
+					root = { is_subject = no }
+					OR = {
+						is_subject = no
+						is_subject_of = ROOT
+					}
+				}
+				is_subject_of = root.top_overlord
+			}
+			country_rank < rank_value:major_power
+			relations:root >= relations_threshold:amicable
+			is_player = no
+			NOT = { has_variable = romanian_state_dont_annex }			
+		}
+	}
+
+	immediate = {
+		random_country = {
+			limit = {
+				has_technology_researched = nationalism
+				country_has_primary_culture = cu:romanian
+				OR = {
+					AND = {
+						root = { is_subject = no }
+						OR = {
+							is_subject = no
+							is_subject_of = ROOT
+						}
+					}
+					is_subject_of = root.top_overlord
+				}
+				relations:root >= relations_threshold:amicable
+				country_rank < rank_value:major_power
+				is_player = no
+				NOT = { has_variable = romanian_state_dont_annex }	
+			}
+			save_scope_as = romanian_state_annex	
+		}
+	}
+
+	option = {
+		name = zz_romania_events.2.a
+
+		default_option = yes
+		annex = scope:romanian_state_annex
+				
+		create_incident = {
+			country = THIS
+			value = 10
+		}
+
+		add_modifier = {
+			name = zz_romanian_nationalism_bonus
+			months = long_modifier_time
+		}
+
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { 
+		trigger = {
+			has_law = law_type:law_monarchy
+			scope:romanian_state_annex = {
+				has_law = law_type:law_monarchy
+			}
+		}
+
+		name = zz_romania_events.2.b
+
+		custom_tooltip = {
+			text = zz_romania_form_personal_union
+		}
+
+		hidden_effect = {
+			create_diplomatic_pact = {
+				country = scope:romanian_state_annex
+				type = personal_union
+			}			
+		}
+		change_relations = {
+			country = scope:romanian_state_annex
+			value = 50
+		}
+		add_modifier = {
+			name = zz_romanian_nationalism_bonus
+			months = long_modifier_time
+		}
+		scope:romanian_state_annex = {
+			set_variable = {
+				name = romanian_state_dont_annex
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+#only meant for specific usage cases. Not triggered by anything
+zz_romania_events.3 = {
+
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	title = zz_romania_events.2.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = zz_romania_events.2.d1
+			}
+		}
+	}
+
+	flavor = zz_romania_events.2.f
+
+
+	trigger = {
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = zz_romania_events.2.a
+		c:CHI = {
+			add_journal_entry = {
+				type = je_warlord_china
+			}
+			set_variable = {
+				name = china_warlord_explosion
+				value = 0
+			}
+		}
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+#only meant for specific usage cases. Not triggered by anything
+zz_romania_events.4 = {
+
+	type = country_event
+	placement = root
+
+	event_image = {
+		video = "gfx/event_pictures/unspecific_signed_contract.bk2"
+	}
+
+	title = zz_romania_events.2.t
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				desc = zz_romania_events.2.d1
+			}
+		}
+	}
+
+	flavor = zz_romania_events.2.f
+
+
+	trigger = {
+	}
+
+	immediate = {
+		
+	}
+
+	option = {
+		name = zz_romania_events.2.a
+		c:CHI = {
+			change_variable = {
+				name = china_warlord_explosion
+				add = 3
+			}
+			set_variable = china_warlord_explosion_loans
+			set_variable = china_abolished_monarchy
+			set_variable = lost_opium_wars
+
+
+		}
+		default_option = yes
+		ai_chance = {
+			base = 1
+		}
+	}
+}

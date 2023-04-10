@@ -1,0 +1,36 @@
+﻿l_english:
+
+  # Workplace Safety group
+ law_serfdom_banned:0 "No Worker Protections"
+ law_serfdom_banned_desc:0 "Employees have no rights nor protections from employer demands."
+
+  # Land Rights group
+ lawgroup_land_rights:0 "Land Rights"
+ lawgroup_land_rights_desc:0 "Who owns and controls arable land?"
+ law_serfdom:0 "Serfdom"
+ law_serfdom_desc:0 "Peasants are tied to their land and must perform labor for their feudal masters."
+ law_tenent_farming:0 "Tenant Farming"
+ law_tenent_farming_desc:0 "The feudal practice of serfdom has been abolished, but most land is still farmed by peasants who often pay exorbitant rents to landowners."
+ law_ownership_ceilings:0 "Land Ownership Ceilings"
+ law_ownership_ceilings_desc:0 "There are some restrictions on the overall amount of land that can be owned by a single landowner in an attempt to encourage peasant land ownership."
+ law_smallholding:0 "Smallholding"
+ law_smallholding_desc:0 "Farmland is most often owned by individual families or jointly by communities who have full rights to their land."
+
+ # Modifiers
+ land_redistribution_modifier:0 "Land Redistribution"
+
+  # Ownership
+ pmg_ownership:0 "Ownership"
+ pmg_ownership_building_subsistence:0 "$pmg_ownership$"
+
+ pm_privately_owned_building_subsistence:0 "Estates"
+ pm_estate_owned_agriculture:0 "Estates"
+ pm_publicly_traded_estates_agriculture:0 "Publicly Traded Estates"
+ pm_restricted_ownership_building_subsistence:0 "Restricted Estates"
+ pm_smallholding_building_subsistence:0 "Smallholding"
+ pm_smallholder_agriculture:0 "Smallholding"
+ pm_smallholder_plantation:0 "Smallholding"
+ pm_publicly_traded_smallholder_agriculture:0 "Publicly Traded"
+ pm_publicly_traded_smallholder_plantation:0 "Publicly Traded"
+ pm_free_soil_building_subsistence:0 "Homesteading"
+

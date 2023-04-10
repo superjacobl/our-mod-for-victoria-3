@@ -1,0 +1,253 @@
+﻿##EDITED
+pm_serfdom_no = {
+	texture = "gfx/interface/icons/production_method_icons/no_serfdom.dds"
+	disallowing_laws = {
+		law_serfdom
+	}
+	
+	building_modifiers = {					
+		unscaled = {
+			building_subsistence_output_add = 4
+		}
+	}
+}		
+
+##EDITED
+pm_privately_owned_building_subsistence = { #Estates
+	texture = "gfx/interface/icons/production_method_icons/estates.dds"
+	
+	unlocking_laws = {
+		law_serfdom
+		law_tenent_farming
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_council_republic	
+	}
+	
+	building_modifiers = { 
+		level_scaled = {
+			building_employment_clergymen_add = 150
+			building_employment_aristocrats_add = 100
+		}
+		unscaled = {
+			building_capitalists_shares_add = 5
+		}
+	}
+}
+
+##NEW
+pm_restricted_ownership_building_subsistence = { #Ownership Ceiling/Restricted Estates
+	texture = "gfx/interface/icons/production_method_icons/estates.dds"
+	
+	unlocking_laws = {
+		law_ownership_ceilings
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_council_republic	
+	}
+
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_clergymen_add = 150
+			building_employment_aristocrats_add = 75
+			building_employment_farmers_add = 25
+		}
+		unscaled = {
+			building_farmers_shares_add = 1	
+		}
+	}
+}
+
+##NEW
+pm_smallholding_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/smallholding.dds"
+
+	unlocking_laws = {
+		law_smallholding
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_council_republic	
+	}
+
+	building_modifiers = {
+		level_scaled = { #farmers replace aristocrats
+			building_employment_clergymen_add = 150
+			building_employment_farmers_add = 100
+		}
+		unscaled = {
+			#building_subsistence_output_add = 1 #Likely OP for now until homesteading implemented
+			building_farmers_shares_add = 2
+		}
+	}
+}
+
+##NEW. holding until homesteading event chain is ready/figured out somehow
+pm_free_soil_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/smallholding.dds"
+
+	unlocking_laws = {
+		law_smallholding
+	}
+
+	disallowing_laws = {
+		law_command_economy
+	}
+
+	building_modifiers = {
+		level_scaled = { #building employs half as many people. 250 of them still fully interact w/ economy
+			building_employment_clergymen_add = 75
+			building_employment_farmers_add = 175
+			building_employment_peasants_add = -2500 #2250 peasants total
+		}
+		unscaled = {
+			building_subsistence_output_add = 1 
+			building_farmers_shares_add = 3
+		}
+	}
+}
+
+##EDITED
+pm_worker_cooperative_building_subsistence = {
+	texture = "gfx/interface/icons/production_method_icons/worker_cooperative.dds"
+
+	unlocking_laws = {
+		law_council_republic
+	}
+	
+	building_modifiers = {
+		level_scaled = {
+			building_employment_peasants_add = 250
+		}
+		unscaled = {
+			building_peasants_shares_add = 1 #only modification. this is likely a typo in game files
+		}
+	}
+}
+
+
+### FARM AND RANCH BUILDING PMS ###
+#Employment split is 4000K laborers, 600 farmers, 300 clergymen for farms, 4000/700/200 in ranches. 100 slots for ownership
+#privately owned shares are 5/2/1 aristocrats/clergymen/farmers
+
+pm_estate_owned_agriculture = { #tenent farming & ownership ceilings. matches default ownership
+	texture = "gfx/interface/icons/production_method_icons/estates.dds"
+
+	unlocking_laws = {
+		law_tenent_farming
+		law_serfdom
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_council_republic	
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_aristocrats_add = 100
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 5 
+			building_clergymen_shares_add = 2
+			building_farmers_shares_add = 1
+		}
+	}
+}
+
+pm_publicly_traded_estates_agriculture = { #matches vanilla except for disallowing loaws
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	unlocking_laws = {
+		law_tenent_farming
+		law_serfdom
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_council_republic
+		law_ownership_ceilings
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_aristocrats_add = 100
+			building_employment_capitalists_add = 50
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 5 
+			building_capitalists_shares_add = 5 
+			building_clergymen_shares_add = 2
+			building_farmers_shares_add = 1
+		}
+	}
+}
+
+pm_smallholder_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/smallholding.dds"
+
+	unlocking_laws = {
+		law_smallholding
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_council_republic	
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_farmers_add = 100
+			building_employment_aristocrats_add = 25
+		}
+		unscaled = {
+			building_aristocrats_shares_add = 5
+			building_farmers_shares_add = 2
+			building_clergymen_shares_add = 2
+		}
+	}
+}
+
+pm_publicly_traded_smallholder_agriculture = {
+	texture = "gfx/interface/icons/production_method_icons/publicly_traded.dds"
+	
+	unlocking_laws = {
+		law_smallholding
+	}
+
+	disallowing_laws = {
+		law_command_economy
+		law_council_republic	
+	}
+
+	unlocking_technologies = {
+		mutual_funds
+	}
+
+	building_modifiers = {
+		level_scaled = {
+			building_employment_farmers_add = 100
+			building_employment_capitalists_add = 25
+		}
+		unscaled = {
+			building_farmers_shares_add = 2
+			building_capitalists_shares_add = 5 
+			building_clergymen_shares_add = 2
+		}
+	}
+}
+
+## PLANTATION BUILDING PMS ##
+#default employment is 4000/800/100 laborers/famers/clergymen. 100 slots for owners
+#estates & public estates are the same as farms/ranches
+

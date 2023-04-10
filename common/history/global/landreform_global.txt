@@ -1,0 +1,140 @@
+﻿# gross as it is, this seems to be the best way to set starting laws appropriately
+GLOBAL = {
+
+	every_country = {
+		limit = {
+			OR = {
+				#LIST SMALLHOLDING COUNTRIES.
+				#only USA/Texas/Boer states in smallholding		
+				this = c:ORA
+				this = c:TRN
+	
+				this = c:TEX
+	
+				this = c:USA
+				}
+		}
+		activate_law = law_type:law_smallholding
+		remove_modifier = land_redistribution_modifier
+
+		activate_production_method = {
+			building_type = building_subsistence_farms
+			production_method = pm_smallholding_building_subsistence
+		}
+		activate_production_method = {
+			building_type = building_subsistence_orchards
+			production_method = pm_smallholding_building_subsistence
+		}
+		activate_production_method = {
+			building_type = building_subsistence_pastures
+			production_method = pm_smallholding_building_subsistence
+		}
+		activate_production_method = {
+			building_type = building_subsistence_fishing_villages
+			production_method = pm_smallholding_building_subsistence
+		}
+		activate_production_method = {
+			building_type = building_subsistence_rice_paddies
+			production_method = pm_smallholding_building_subsistence
+		}
+	}
+	
+	every_country = {
+		limit = {
+			OR = {
+				#LIST TENANT FARMING COUNTRIES
+				this = c:ANH
+				this = c:AUS
+				this = c:ARG
+
+				this = c:BAD
+				this = c:BAV
+				this = c:BEL
+				this = c:BRA
+				this = c:BRE
+				this = c:BRZ
+
+				this = c:CHL
+				this = c:CLM
+				this = c:COB
+				this = c:CUB
+
+				this = c:DEN
+
+				this = c:ECU
+
+				this = c:FIN
+				this = c:FRA
+				this = c:FRM
+
+				this = c:GBR
+				this = c:GRE
+
+				this = c:HAI
+				this = c:HAM
+				this = c:HAN
+				this = c:HBC
+				this = c:HEK
+				this = c:HES
+				this = c:HOH
+				this = c:HOL
+				
+				this = c:LIP
+				this = c:LUB
+				this = c:LUC
+				this = c:LUX
+
+				this = c:MEI
+				this = c:MEX
+				this = c:MKT
+				this = c:MOD
+				this = c:MST
+
+				this = c:NAS
+				this = c:NBS
+				this = c:NET
+				this = c:NOR
+				this = c:NSW
+				this = c:NVS
+
+				this = c:OLD
+				this = c:ONT
+
+				this = c:PAP
+				this = c:PAR
+				this = c:PEU
+				this = c:POR
+				this = c:PRG
+				this = c:PRU
+
+				this = c:QUE
+
+				this = c:SAF
+				this = c:SAR
+				this = c:SAS
+				this = c:SAX
+				this = c:SCH
+				this = c:SCM
+				this = c:SCW
+				this = c:SIC
+				this = c:SPA
+				this = c:SWE
+
+				this = c:TUS
+
+				this = c:UCA
+				this = c:URU
+
+				this = c:VNZ
+
+				this = c:WAS
+				this = c:WEI
+				this = c:WLD
+				this = c:WUR
+
+			}
+		}
+		activate_law = law_type:law_tenent_farming
+	}
+
+}

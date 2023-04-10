@@ -1,0 +1,32 @@
+building_corporate_dystopia = {
+	building_group = bg_monuments
+	texture = "gfx/interface/icons/building_icons/forbidden_city.dds"
+	expandable = no
+	buildable = no
+	downsizeable = no
+	unique = yes
+	
+	entity_not_constructed = { }
+	entity_under_construction = { "building_construction_3x3_entity" }
+	entity_constructed = { "wonder_forbidden_city_01_entity"}
+	
+	city_gfx_interactions = {
+		clear_size_area = yes
+		size = 4
+	}
+	
+	production_method_groups = {
+		pmg_base_building_corporate_dystopia
+	}
+	
+	possible = {
+		error_check = {
+			severity = invalid
+			this = {
+				state_region = s:STATE_YORUBA_STATES
+			}
+		}
+	}
+	
+	required_construction = construction_cost_monument
+}

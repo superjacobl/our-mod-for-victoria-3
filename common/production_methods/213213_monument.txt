@@ -1,0 +1,31 @@
+pm_default_building_corporate_dystopia = {
+	texture = "gfx/interface/icons/production_method_icons/wonders.dds"
+
+	country_modifiers = {
+		workforce_scaled = {
+			state_birth_rate_mult = 0.05
+			country_bureaucracy_add = 5000
+			country_construction_add = 25
+			country_legitimacy_add = 25
+			country_authority_add = 200
+			country_prestige_add = 250
+			country_weekly_innovation_add = 20
+			state_tax_capacity_add = 25
+		}
+	}
+	state_modifiers = {
+		workforce_scaled = {
+			state_tax_capacity_add = 1475
+		}
+	}
+
+	building_modifiers = {
+		#workforce_scaled = {
+		#}
+
+		level_scaled = {
+			building_employment_bureaucrats_add = 800
+			building_employment_clergymen_add = 200
+		}
+	}
+}

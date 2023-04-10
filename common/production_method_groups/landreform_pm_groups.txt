@@ -1,0 +1,110 @@
+﻿
+pmg_ownership_building_subsistence = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_privately_owned_building_subsistence
+		pm_restricted_ownership_building_subsistence
+		pm_smallholding_building_subsistence
+		pm_worker_cooperative_building_subsistence
+	}
+}
+
+##TEMPLATES. Copied/Pasted to farms/ranches and plantations but not used directly anywhere
+pmg_ownership_building_agriculture = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture
+		pm_publicly_traded_estates_agriculture
+		pm_smallholder_agriculture
+		pm_publicly_traded_smallholder_agriculture
+		pm_government_run
+		pm_worker_cooperative_farm
+	}
+}
+
+pmg_ownership_building_plantation = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture #same as farming/ranching
+		pm_publicly_traded_estates_agriculture #same as farming/ranching
+		pm_smallholder_plantation
+		pm_publicly_traded_smallholder_plantation
+		pm_government_run
+		pm_worker_cooperative_plantation
+	}
+}
+
+##FARMING AND RANCHING OWNERSHIP PMGS
+pmg_ownership_land_building_rye_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture
+		pm_publicly_traded_estates_agriculture
+		pm_smallholder_agriculture
+		pm_publicly_traded_smallholder_agriculture
+		pm_government_run
+		pm_worker_cooperative_farm
+	}
+}
+
+pmg_ownership_land_building_wheat_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture
+		pm_publicly_traded_estates_agriculture
+		pm_smallholder_agriculture
+		pm_publicly_traded_smallholder_agriculture
+		pm_government_run
+		pm_worker_cooperative_farm
+	}
+}
+
+pmg_ownership_land_building_rice_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture
+		pm_publicly_traded_estates_agriculture
+		pm_smallholder_agriculture
+		pm_publicly_traded_smallholder_agriculture
+		pm_government_run
+		pm_worker_cooperative_farm
+	}
+}
+
+pmg_ownership_land_building_maize_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture
+		pm_publicly_traded_estates_agriculture
+		pm_smallholder_agriculture
+		pm_publicly_traded_smallholder_agriculture
+		pm_government_run
+		pm_worker_cooperative_farm
+	}
+}
+
+pmg_ownership_land_building_millet_farm = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture
+		pm_publicly_traded_estates_agriculture
+		pm_smallholder_agriculture
+		pm_publicly_traded_smallholder_agriculture
+		pm_government_run
+		pm_worker_cooperative_farm
+	}
+}
+
+pmg_ownership_land_building_livestock_ranch = {
+	texture = "gfx/interface/icons/generic_icons/mixed_icon_ownership.dds"
+	production_methods = {
+		pm_estate_owned_agriculture
+		pm_publicly_traded_estates_agriculture
+		pm_smallholder_agriculture
+		pm_publicly_traded_smallholder_agriculture
+		pm_government_run
+		pm_worker_cooperative_farm
+	}
+}
+
+##PLANTATION OWNERSHIP PMGS

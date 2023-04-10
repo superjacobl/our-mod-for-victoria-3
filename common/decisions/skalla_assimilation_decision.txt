@@ -1,0 +1,15 @@
+﻿skalla_assimilation_decision = {
+	is_shown = {
+		always = yes
+	}
+
+	possible = {	
+		is_ai = no
+	}
+	
+	when_taken = {
+		trigger_event = {
+			id = skalla_assimilation_event.0
+		}
+	}
+}

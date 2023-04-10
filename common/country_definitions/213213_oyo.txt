@@ -1,0 +1,20 @@
+MON = {
+	color = { 211 184 179 }
+	
+	country_type = recognized
+
+	tier = principality
+	
+	cultures = { serb }
+	capital = STATE_MONTENEGRO
+	is_named_from_capital = yes
+}
+OYO = {
+	color = { 39  108  140 }
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { yoruba }
+	capital = STATE_YORUBA_STATES
+}

@@ -1,0 +1,46 @@
+﻿#####################
+# "Made in Romania" #
+#####################
+
+zz_je_romania = {
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+
+	should_be_pinned_by_default = yes
+
+	is_shown_when_inactive = {
+		can_form_nation = ROM
+	}
+
+	possible = {
+		has_technology_researched = nationalism
+	}
+
+	on_monthly_pulse = {
+		events = {
+			zz_romania_events.2 # Unify with Moldova/Wallachia/Transylvania
+			#romania_events.3 # Event for Alexandru would be nice
+		}
+	}
+
+	complete = {
+		is_subject = no
+		any_state = {
+			state_region = { is_homeland = cu:romanian }
+			OR = {
+				owner = ROOT
+				owner = {
+					is_subject_of = ROOT
+				}
+			}
+			count >= 2
+		}
+		country_rank >= rank_value:minor_power
+	}
+
+	on_complete = {
+		trigger_event = {
+			id = zz_romania_events.1
+			popup = yes
+		}
+	}
+}

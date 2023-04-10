@@ -1,0 +1,308 @@
+﻿namespace = skalla_assimilation_event
+
+skalla_assimilation_event.0 = {
+	type = country_event
+	
+	title = skalla_assimilation_event.0.t
+	desc = skalla_assimilation_event.0.t.d
+	flavor = skalla_assimilation_event.0.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	on_opened_soundeffect = "event:/SFX/Events/europenorthamerica/political_extremism"
+	icon = "gfx/interface/icons/event_icons/event_protest.dds"
+	duration = 3
+	
+	event_image = {
+		video = "gfx/event_pictures/europenorthamerica_political_extremism.bk2"
+	}
+	
+	option = {
+		name = skalla_assimilation_event.0.a
+		custom_tooltip = skalla_assimilation_event.0.a.tt
+		default_option = yes
+		trigger_event = {
+			id = skalla_assimilation_event.1
+		}
+	}
+	
+	option = {
+		name = skalla_assimilation_event.0.b
+		custom_tooltip = skalla_assimilation_event.0.b.tt
+		trigger_event = {
+			id = skalla_assimilation_event.2
+		}
+	}
+	
+	option = {
+		name = skalla_assimilation_event.0.c
+		custom_tooltip = skalla_assimilation_event.0.c.tt
+		trigger_event = {
+			id = skalla_assimilation_event.3
+		}
+	}
+	
+	option = {
+		name = skalla_assimilation_event.0.d
+		custom_tooltip = skalla_assimilation_event.0.d.tt
+		trigger_event = {
+			id = skalla_assimilation_event.4
+		}
+	}
+		
+	option = {
+		name = skalla_assimilation_event.0.e
+		custom_tooltip = skalla_assimilation_event.0.e.tt
+	}
+}
+
+skalla_assimilation_event.1 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		every_country = {
+			save_scope_as = skalla_country
+			every_scope_state = {
+				save_scope_as = skalla_state
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							is_primary_culture_of = scope:skalla_country
+						}
+					}
+					culture = { save_scope_as = skalla_primary_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							NOT = { is_primary_culture_of = scope:skalla_country}
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						NOR = {
+							culture = { is_primary_culture_of = scope:skalla_country }
+							culture = scope:skalla_minority_culture
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture_2 }				
+				}			
+				if = {
+					limit = {
+						AND = {
+							exists = scope:skalla_primary_culture
+							exists = scope:skalla_minority_culture
+							exists = scope:skalla_minority_culture_2
+						}
+					}
+					scope:skalla_state = {
+						every_scope_pop = {
+							limit = {
+								culture = {
+									NOT = { is_primary_culture_of = scope:skalla_country }
+								}					
+							}
+							change_pop_culture = {
+								value = 1
+								target = scope:skalla_primary_culture 
+							}
+						}
+					}
+				}
+			}			
+		}
+		ROOT = { post_notification = skalla_assimilation_notification }	
+	}
+}
+
+skalla_assimilation_event.2 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		every_country = {
+			save_scope_as = skalla_country
+			every_scope_state = {
+				save_scope_as = skalla_state
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							is_primary_culture_of = scope:skalla_country
+						}
+					}
+					culture = { save_scope_as = skalla_primary_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							NOT = { is_primary_culture_of = scope:skalla_country}
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						NOR = {
+							culture = { is_primary_culture_of = scope:skalla_country }
+							culture = scope:skalla_minority_culture
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture_2 }				
+				}	
+				if = {
+					limit = {
+						AND = {
+							exists = scope:skalla_primary_culture
+							exists = scope:skalla_minority_culture
+							exists = scope:skalla_minority_culture_2
+						}
+					}
+					scope:skalla_state = {
+						every_scope_pop = {
+							limit = {
+								NOR = {
+									culture = scope:skalla_minority_culture	
+									culture = scope:skalla_minority_culture_2
+									culture = { is_primary_culture_of = scope:skalla_country }				
+								}
+							} 
+							change_pop_culture = {
+								value = 1
+								target = scope:skalla_primary_culture 
+							}
+						}
+					}
+				}
+			}
+		}	
+		ROOT = { post_notification = skalla_assimilation_notification }
+	}
+}
+
+
+skalla_assimilation_event.3 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		ROOT = {
+			save_scope_as = skalla_country
+			every_scope_state = {
+				save_scope_as = skalla_state
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							is_primary_culture_of = scope:skalla_country
+						}
+					}
+					culture = { save_scope_as = skalla_primary_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							NOT = { is_primary_culture_of = scope:skalla_country}
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						NOR = {
+							culture = { is_primary_culture_of = scope:skalla_country }
+							culture = scope:skalla_minority_culture
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture_2 }				
+				}			
+				if = {
+					limit = {
+						AND = {
+							exists = scope:skalla_primary_culture
+							exists = scope:skalla_minority_culture
+							exists = scope:skalla_minority_culture_2
+						}
+					}
+					scope:skalla_state = {
+						every_scope_pop = {
+							limit = {
+								culture = {
+									NOT = { is_primary_culture_of = scope:skalla_country }
+								}					
+							}
+							change_pop_culture = {
+								value = 1
+								target = scope:skalla_primary_culture 
+							}
+						}
+					}
+				}
+			}			
+		}
+		ROOT = { post_notification = skalla_assimilation_notification }	
+	}
+}
+
+skalla_assimilation_event.4 = {
+	type = country_event
+	hidden = yes
+
+	immediate = {
+		ROOT = {
+			save_scope_as = skalla_country
+			every_scope_state = {
+				save_scope_as = skalla_state
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							is_primary_culture_of = scope:skalla_country
+						}
+					}
+					culture = { save_scope_as = skalla_primary_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						culture = {
+							NOT = { is_primary_culture_of = scope:skalla_country}
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture }				
+				}
+				random_scope_pop = {
+					limit = { 
+						NOR = {
+							culture = { is_primary_culture_of = scope:skalla_country }
+							culture = scope:skalla_minority_culture
+						}
+					}
+					culture = { save_scope_as = skalla_minority_culture_2 }				
+				}	
+				if = {
+					limit = {
+						AND = {
+							exists = scope:skalla_primary_culture
+							exists = scope:skalla_minority_culture
+							exists = scope:skalla_minority_culture_2
+						}
+					}
+					scope:skalla_state = {
+						every_scope_pop = {
+							limit = {
+								NOR = {
+									culture = scope:skalla_minority_culture	
+									culture = scope:skalla_minority_culture_2
+									culture = { is_primary_culture_of = scope:skalla_country }				
+								}
+							} 
+							change_pop_culture = {
+								value = 1
+								target = scope:skalla_primary_culture 
+							}
+						}
+					}
+				}
+			}
+		}	
+		ROOT = { post_notification = skalla_assimilation_notification }
+	}
+}

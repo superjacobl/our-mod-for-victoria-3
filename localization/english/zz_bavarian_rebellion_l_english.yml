@@ -1,0 +1,11 @@
+﻿l_english:
+ notification_springtime_of_the_people_je_opened_name:0 "Springtime of the Peoples in [SCOPE.sC('originator').GetName]"
+ notification_springtime_of_the_people_je_opened_desc:0 "Liberal agitators in [SCOPE.sC('originator').GetName] are demanding more freedoms. Unless stamped out or compromised with, this may lead to a revolution."
+ springtime_of_the_people_je_opened_group:0 "Springtime Of The Peoples"
+ notification_springtime_of_the_people_je_opened_tooltip:0 "This political Springtime in [SCOPE.sC('originator').GetName] may inspire citizens of other countries to create unrest in the pursuit of liberty."
+ springtime_of_the_people_je_opened:0 "Springtime of the Peoples"
+ notification_springtime_of_the_people_je_over_name:0 "Springtime of the Peoples in [SCOPE.sC('originator').GetName]"
+ notification_springtime_of_the_people_je_over_desc:0 "The prolonged period of unrest in [SCOPE.sC('originator').GetName] is over."
+ springtime_of_the_people_je_opened_group:0 "Springtime Of The Peoples"
+ notification_springtime_of_the_people_je_opened_tooltip:0 "Whether the liberal forces in [SCOPE.sC('originator').GetName] were victorious or have been vanquished, the Journal Entry "Springtime of the Peoples" is now closed."
+ springtime_of_the_people_je_opened:0 "Springtime of the Peoples"

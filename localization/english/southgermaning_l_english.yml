@@ -1,0 +1,22 @@
+﻿l_english:
+ sgf_test_modifier:0 "Austria has successfully unified some of the South German people."
+ aus_sgf_relations_tt:0 "Have at least Amicable relations with two South German subjects of yours."
+ unite_sgf_tt:0 "Two South German subjects will be unified."
+ sgf_test_modifier:0 "South German Unifier"
+ aus_unified_sgf:0 "South German Federation"
+ sgf_aus.6.t:0 "South German Federation"
+ sgf_aus.6.d:0 "The unification of Southern Germany is complete. The various bickering governments have been integrated into one, under the administration of [SCOPE.sCountry('SGF_country').GetName] and with the enthusiastic approval of [ROOT.GetCountry.GetName]."
+ sgf_aus.6.f:0 "The dream of a unified South German Federation has finally been achieved. The threat of encroaching powers and the destructive forces of North German nationalism have united these people. The Austrian order is renewed."
+ sgf_aus.6.a:0 "The South stands tall!"
+ je_sgf_aus:0 "The South German Federation"
+ je_sgf_aus_reason:0 "The Prussians strive to unify Germany under their banner. This renewed assault of nationalism on all that is righteous must be halted. You can unify South German subjects of yours via a decision."
+ sgf_unite_aus:0 "Unify South German Subjects"
+ sgf_unite_aus_desc:0 "The time has come to unite the people of South Germany."
+ sgf_aus.2.t:0 "The Unification of [SCOPE.sCountry('sgf_scope_1').GetName] and [SCOPE.sCountry('sgf_scope_2').GetName]"
+ sgf_aus.2.d:0 "[ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle] [ROOT.GetCountry.GetRuler.GetFullName]  has signed into law the confederation between [SCOPE.sCountry('sgf_scope_1').GetName] and [SCOPE.sCountry('sgf_scope_2').GetName]. This marks a great victory in our goal of unifying all of Southern Germany."
+ sgf_aus.1.f:0 "The righteousness of our cause can be recognized by the fury of those wicked enough to suggest the Saupreiß lead them. Order will prevail!"
+ sgf_aus.2.a:0 "God save the [ROOT.GetCountry.GetRuler.GetPrimaryRoleTitle]!"
+
+
+
+

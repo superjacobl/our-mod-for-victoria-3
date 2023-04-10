@@ -1,0 +1,7 @@
+﻿skalla_assimilation_notification = {
+	type = country
+	texture = "gfx/interface/icons/notification_icons/pops.dds"
+
+	notification_type = feed
+	days = 28
+}
