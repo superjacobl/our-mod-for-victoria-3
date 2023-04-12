@@ -101,6 +101,7 @@ STATE_ALASKA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 36
     }
     naval_exit_id = 3119
@@ -177,6 +178,7 @@ STATE_COLORADO = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 24
     }
     resource = {
@@ -270,6 +272,7 @@ STATE_SOUTH_DAKOTA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 24
     }
     resource = {
@@ -1067,6 +1070,7 @@ STATE_BRITISH_COLUMBIA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 24
     }
     naval_exit_id = 3154
@@ -1133,6 +1137,7 @@ STATE_YUKON_TERRITORY = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 36
     }
     naval_exit_id = 0
@@ -1231,6 +1236,7 @@ STATE_NEVADA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 45
     }
     naval_exit_id = 0
@@ -1253,6 +1259,7 @@ STATE_ARIZONA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 15
     }
     naval_exit_id = 0
@@ -1295,6 +1302,7 @@ STATE_CALIFORNIA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 36
     }
     resource = {
@@ -1322,6 +1330,7 @@ STATE_SONORA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 18
     }
     naval_exit_id = 3153
@@ -1515,6 +1524,7 @@ STATE_GUERRERO = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 9
     }
     resource = {
@@ -1543,6 +1553,7 @@ STATE_OAXACA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 6
     }
     resource = {
@@ -1591,6 +1602,7 @@ STATE_ZACATECAS = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 12
     }
     naval_exit_id = 0

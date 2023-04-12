@@ -10,7 +10,9 @@ base_values = {
 	country_tech_spread_add = 40 #25
 	
 	country_loan_interest_rate_add = 0.2
+
 	state_birth_rate_mult = 0.1
+	
 	country_legitimacy_govt_size_add = 1
 	
 	country_bureaucracy_add = 300
@@ -35,7 +37,7 @@ base_values = {
 	state_aristocrats_investment_pool_contribution_add = 0.15
 	state_capitalists_investment_pool_contribution_add = 0.20	
 	
-	country_construction_add = 10
+	country_construction_add = 5 #from 10 - to reduce the number of buildings in one-state countries thus lowering lag
 	
 	building_mobilization_cost_mult = 0.6
 	

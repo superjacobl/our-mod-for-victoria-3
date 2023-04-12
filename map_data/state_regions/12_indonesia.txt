@@ -42,6 +42,7 @@ STATE_NORTH_BORNEO = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 24
     }
     resource = {
@@ -69,6 +70,7 @@ STATE_WEST_BORNEO = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 18
     }
     resource = {

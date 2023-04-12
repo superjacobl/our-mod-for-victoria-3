@@ -16,6 +16,10 @@ opium_wars_lost = {
     state_loyalists_from_sol_change_mult = -0.25
     country_prestige_mult = -0.25
     state_standard_of_living_add = -2
+	
+	#try to make china have reolvutions
+	state_poor_expected_sol = 3
+	state_middle_expected_sol = 5
 }
 
 opium_wars_navy_modifier = {

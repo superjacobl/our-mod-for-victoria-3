@@ -42,6 +42,7 @@ STATE_GUAYANA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 36
     }
     resource = {
@@ -390,6 +391,7 @@ STATE_CAJAMARCA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 12
     }
     resource = {
@@ -783,6 +785,7 @@ STATE_ARAUCANIA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 12
     }
     resource = {
@@ -1073,6 +1076,7 @@ STATE_MINAS_GERAIS = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 24
     }
     resource = {

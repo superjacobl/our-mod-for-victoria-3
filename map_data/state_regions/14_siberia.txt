@@ -162,6 +162,7 @@ STATE_CHUKOTKA = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 12
     }
     naval_exit_id = 3128
@@ -219,6 +220,7 @@ STATE_YAKUTSK = {
     }
     resource = {
         type = "bg_gold_fields"
+        depleted_type = "bg_gold_mining"
         undiscovered_amount = 24
     }
     resource = {

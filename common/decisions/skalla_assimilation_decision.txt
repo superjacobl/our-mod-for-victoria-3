@@ -12,4 +12,7 @@
 			id = skalla_assimilation_event.0
 		}
 	}
+	ai_chance = {
+		base = 0
+	}
 }

@@ -1019,6 +1019,7 @@ STATE_ATTICA = {
         bg_sulfur_mining = 96
         bg_logging = 21
         bg_fishing = 24
+        bg_gold_mining = 8
     }
     naval_exit_id = 3033
 }
